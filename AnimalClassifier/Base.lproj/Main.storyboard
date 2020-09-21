@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zh7-Zx-jQF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="b7Z-aG-oZa">
+            <objects>
+                <viewController id="Zh7-Zx-jQF" customClass="ViewController" customModule="AnimalClassifier" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Uh-5h-1H2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nju-Te-vcB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ap-Dp-N5M">
+                                <rect key="frame" x="20" y="719" width="374" height="80"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="T85-Jn-OHj">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an image below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="BKE-NX-P4D">
+                                            <rect key="frame" x="8" y="8" width="358" height="64"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="BKE-NX-P4D" firstAttribute="top" secondItem="T85-Jn-OHj" secondAttribute="top" constant="8" id="1Eq-rM-52g"/>
+                                        <constraint firstAttribute="trailing" secondItem="BKE-NX-P4D" secondAttribute="trailing" constant="8" id="BGP-0A-xdh"/>
+                                        <constraint firstItem="BKE-NX-P4D" firstAttribute="leading" secondItem="T85-Jn-OHj" secondAttribute="leading" constant="8" id="T0G-j8-7Jc"/>
+                                        <constraint firstAttribute="bottom" secondItem="BKE-NX-P4D" secondAttribute="bottom" constant="8" id="yH6-Rg-vbv"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="qLs-bJ-ne7"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5W-B2-K3o">
+                                <rect key="frame" x="20" y="807" width="374" height="47"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Choose Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraBtnWasPressed:" destination="Zh7-Zx-jQF" eventType="touchUpInside" id="g3x-Nb-mG4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nju-Te-vcB" firstAttribute="bottom" secondItem="g7O-2P-b84" secondAttribute="bottom" id="71c-ux-NcL"/>
+                            <constraint firstItem="8ap-Dp-N5M" firstAttribute="leading" secondItem="g7O-2P-b84" secondAttribute="leading" constant="20" id="85z-6Y-C79"/>
+                            <constraint firstItem="nju-Te-vcB" firstAttribute="leading" secondItem="g7O-2P-b84" secondAttribute="leading" id="Np2-hC-ga4"/>
+                            <constraint firstItem="g7O-2P-b84" firstAttribute="trailing" secondItem="Q5W-B2-K3o" secondAttribute="trailing" constant="20" id="Qrz-ai-5wJ"/>
+                            <constraint firstItem="Q5W-B2-K3o" firstAttribute="top" secondItem="8ap-Dp-N5M" secondAttribute="bottom" constant="8" id="aw1-li-l5y"/>
+                            <constraint firstItem="Q5W-B2-K3o" firstAttribute="leading" secondItem="g7O-2P-b84" secondAttribute="leading" constant="20" id="hRU-yZ-Aih"/>
+                            <constraint firstItem="g7O-2P-b84" firstAttribute="bottom" secondItem="Q5W-B2-K3o" secondAttribute="bottom" constant="8" id="kMj-Rp-xKx"/>
+                            <constraint firstItem="g7O-2P-b84" firstAttribute="trailing" secondItem="8ap-Dp-N5M" secondAttribute="trailing" constant="20" id="kVR-p1-Oim"/>
+                            <constraint firstItem="nju-Te-vcB" firstAttribute="top" secondItem="5Uh-5h-1H2" secondAttribute="top" id="nft-xj-FbU"/>
+                            <constraint firstItem="nju-Te-vcB" firstAttribute="trailing" secondItem="g7O-2P-b84" secondAttribute="trailing" id="taT-PL-3wK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g7O-2P-b84"/>
+                    </view>
+                    <connections>
+                        <outlet property="classificationLabel" destination="BKE-NX-P4D" id="WXk-JW-RXO"/>
+                        <outlet property="imageView" destination="nju-Te-vcB" id="nGK-10-GnR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ve-C2-vtZ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.33333333333334" y="133.25892857142856"/>
+        </scene>
+    </scenes>
+</document>
